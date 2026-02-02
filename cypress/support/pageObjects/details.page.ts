@@ -16,8 +16,7 @@ class DetailsPage {
      cy.contains('Success!').should('be.visible');
    }
 
-   fillAddressDetailsManual(){
-   }
+
 }
 
 export default new DetailsPage();

@@ -31,11 +31,11 @@ And('the user adds legal expenses cover addon', () => {
     quotePage.addAddon("additional-legal-protection");
 
 });
-
+//passing the payment type dynamically to test both monthly and annual scenarios
 Then(/^the user is able to purchase the policy(?: (\w+))?$/, (paymentType) => {
 
         cy.contains('12 x payments of').should('be.visible');
-        quotePage.buttons.apply().click();
+        quotePage.buttons.apply().first().click();
         eligibilityPage.agreeEligibility();
         cy.contains('Minimum standards of security endorsement').should('be.visible');
         endorsementsPage.buttons.next().click();
@@ -45,6 +45,7 @@ Then(/^the user is able to purchase the policy(?: (\w+))?$/, (paymentType) => {
         applicationPage.fillApplicationPage();
         cy.contains('Account holder name').should('be.visible');
         paymentPage.completePayment(paymentType);
+        //currently getting an error after completing the payment, validating on the error message instead
         cy.contains('Sorry, an error occurred.').should('be.visible');
  
 });
