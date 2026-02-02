@@ -9,7 +9,7 @@ export default defineConfig({
       return require('./cypress/plugins/index.js')(on, config)
     },
     baseUrl: 'https://quotes.test.uinsure.co.uk/',
-    specPattern: 'cypress/e2e/**/*.{feature,features}',
+    specPattern: 'cypress/e2e/*.{feature,features}',
     excludeSpecPattern: ['*.js', '*.ts', '*.md'],
   },
 })

@@ -1,14 +1,19 @@
+import testData from '../testData.json';
+
 class LoginPage {
-    get email() {
-        return cy.get('#login-email-address');
-    }
 
-    get password() {
-        return cy.get('#login-password');
-    }
+    buttons = {
+        signIn: () => cy.get('[data-testid="login-sign-in"]')
+    };
 
-    get signInButton() {
-        return cy.get('[data-testid="login-sign-in"]');
+    inputFields = {
+        email: () => cy.get('#login-email-address'),
+        password: () => cy.get('#login-password')
+    };
+
+    enterDetails(){
+        this.inputFields.email().type(testData.loginEmail);
+        this.inputFields.password().type(testData.password);
     }
 }
 

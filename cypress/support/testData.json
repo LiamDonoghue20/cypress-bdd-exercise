@@ -1,0 +1,19 @@
+{
+    "loginEmail": "john.doe@uinsure.co.uk",
+    "password": "Password2",
+    "applicant": {
+        "firstName": "Tester",
+        "lastName": "Automation",
+        "dateOfBirth": "01/01/1990",
+        "postcode": "BD5 9LJ",
+        "clientEmail": "client@email.com",
+        "number": "0700000000",
+        "interestedPartyEmail": "interested@party.com",
+        "mortgageProvider": "Test Provider",
+        "thirdParty": "Test Third Party"
+    },
+    "bankDetails": {
+        "accountNumber": "55779911",
+        "sortCode": "200000"
+    }
+}
